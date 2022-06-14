@@ -1,11 +1,11 @@
-$primary: rgb(9, 143, 253);
+$primary: rgb(9, 180, 253);
 $secondary: rgb(15, 15, 15);
 $fontColor: white;
 $opacity: 80%;
 $box-shadow: -3px 4px 20px;
 $sizeOne: 3rem;
 $sizeTwo: 2rem;
-$sizeThree: 1.2rem;
+$sizeThree: 1.5rem;
 $sizeFour: 1.5rem;
 
 
@@ -16,7 +16,7 @@ $sizeFour: 1.5rem;
 body {
   text-align: center;
   background-color: rgb(222, 214, 225);
-  font-family: cursive;
+  font-family: 'Courier New', Courier, monospace;
   color: $fontColor;
 }
 
@@ -119,20 +119,20 @@ i,
 
   a {
     margin: auto;
-    width: 300px;
+    font-weight: bolder;
+    min-width: 350px;
+    width: 20vw;
     text-decoration: none;
-    background-color: white;
-    border: 1px solid $secondary;
     font-size: $sizeThree;
 
     &:hover {
       opacity: $opacity;
-      border: 2px solid $primary;
       box-shadow: $box-shadow;
     }
 
     img {
-      width: 300px;
+      min-width: 350px;
+      width: 20vw;
     }
   }
 }

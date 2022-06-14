@@ -15,7 +15,7 @@ function Profile() {
             </div>
             <div>
                 <div>
-                    <h2>A bit about me.</h2>
+                    <h2>A bit about me</h2>
                     <p>I am a self-taught front end web developer. After working many years as a construction/ refurbishment specialist on my own company which I built from scratch, I decided it was time for a change. Since then, I've been studying and applying myself to become a web developer. It's been a tough journey but I was transformed along the way. Not only I became a competent web developer but I discovered soft skills, such as, attention to detail, ability to focus, problem solving, and others, that I didn't know I had. I am excited to announce that I am open for business.</p>
                 </div>
                 <div className='portfolio-items'>

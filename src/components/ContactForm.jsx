@@ -1,29 +1,29 @@
-import React, {useState} from 'react';
 import emailjs from 'emailjs-com'
 
 function ContactForm() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      })
+//     const [formData, setFormData] = useState({
+//         name: '',
+//         email: '',
+//         phone: '',
+//         message: ''
+//       })
 
-      const {name, email, phone, message} = formData;
+//       const {name, email, phone, message} = formData;
 
-      const onChange = (e) => {
-        setFormData((prevState) => ({
-          ...prevState,
-          [e.target.id]: e.target.value,
-        }))
-      };
+      // const onChange = (e) => {
+      //   setFormData((prevState) => ({
+      //     ...prevState,
+      //     [e.target.id]: e.target.value,
+      //   }))
+      // };
+
 
       const handleEmail = async (e) => {
         e.preventDefault();
 
         emailjs.sendForm('service_3s3ip08', 'template_1uahw9r', e.target, 'oCevdRnvvsh-VZu47')
         .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
+          alert('Thank you for your message', response.status, response.text);
        }, function(error) {
           console.log('FAILED...', error);
        });
@@ -36,17 +36,17 @@ function ContactForm() {
             <input 
             type="text"  
             id='name' 
-            value={name} 
-            onChange={onChange}
+            name= 'name' 
+            // onChange={onChange}
             />
             </div>
             <div className="input-layout">
             <label htmlFor="">Email</label>
             <input 
-            type="text"  
+            type="email"  
             id='email' 
-            value={email} 
-            onChange={onChange}
+            name='email' 
+            // onChange={onChange}
             />
             </div>
             <div className="input-layout">
@@ -54,16 +54,16 @@ function ContactForm() {
             <input 
             type="text"  
             id='phone' 
-            value={phone} 
-            onChange={onChange}
+            name='phone' 
+            // onChange={onChange}
             />
             </div>
             <div className="input-layout">
             <label htmlFor="">Your message</label>
             <textarea type="text"  
             id='message' 
-            value={message} 
-            onChange={onChange} 
+            name='message' 
+            // onChange={onChange} 
             cols="30" 
             rows="10"></textarea>
             </div>
